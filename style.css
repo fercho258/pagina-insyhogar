@@ -1,25 +1,70 @@
-body{
+body {
     background: #cccccc;
     border: 2px solid red;
     padding: 50px;
     margin: 10px;
+}
 
-h1{
+
+h1 {
     text-align: center;
 }
 
-p{
+p {
     text-align: center;
 }
 
-em strong{
-    color:red
+em strong {
+    color: red
 }
 
-#mision{
+#mision {
     font-size: 20px;
 }
 
-img{
-    width: ;
+img {
+    width: 100%;
 }
+
+
+
+
+.redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.redes-sociales .bi {
+    margin: 10px;
+    font-size: 5vh;
+}
+
+.bi-facebook:hover {
+    color: blue;
+
+
+}
+
+.bi-instagram:hover {
+    color: chocolate;
+}
+
+.relative{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 20px;
+    
+    
+
+
+}
+
+
+
