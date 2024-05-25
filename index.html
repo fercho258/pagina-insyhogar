@@ -1,73 +1,49 @@
 <!DOCTYPE html>
-
-<html>
-
 <html lang="es">
 
 <head>
-
-    <meta chartset="UTF-8">
+    <meta charset="UTF-8">
     <title>INSYHOGAR</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
 </head>
 
 <body>
-
-    <header>
-        <div class="redes-sociales">
-            <a href="https://www.instagram.com/edwin_mariangel?utm_source=qr&igsh=bzRmNWJsczRqeDhu" target="_blank"><i
-                    class="bi bi-instagram"></i></a>
-
-            <a href="https://www.instagram.com/edwin_mariangel?utm_source=qr&igsh=bzRmNWJsczRqeDhu" target="_blank"><i
-                    class="bi bi-facebook"></i></a>
+    <header class="bg-gray-800 text-white p-8 flex justify-between itens-center">
+        <div class="redes-sociales flex justify-end space-x-4">
+            <a href="https://www.instagram.com/insyhogar?igsh=Njd0ZjZmMDBoYzJl" target="_blank">
+                <i class="bi bi-instagram text-red-500 hover:text-red-700"></i>
+            </a>
+            <a href="https://www.facebook.com/insyhogar?mibextid=ZbWKwL" target="_blank">
+                <i class="bi bi-facebook text-blue-500 hover:text-blue-700"></i>
+            </a>
         </div>
-
-
-
-        <div class="relative">
-            <label for="Search" class="sr-only"> Search </label>
-
-            <input type="text" id="Search" placeholder="Buscar" class=" rounded-md  py-2 pe-10 shadow-sm sm:text-sm" />
-
+        <div class="flex items-center">
+            <label for="Search" class="sr-only">Search</label>
+            <input type="text" id="Search" placeholder="Buscar" class="rounded-md py-2 pe-10 shadow-sm sm:text-sm mr-4" />
             <span class="absolute inset-y-0 end-2 grid w-10 place-content-center">
                 <button type="button" class="text-gray-600 hover:text-blue-700">
                     <span class="sr-only">Search</span>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="h-4 w-4">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                     </svg>
                 </button>
             </span>
         </div>
 
     </header>
-    <div>
-        <img id="logo-insy" src="logo-insy.jpg">
+
+    <div class="bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('logo-insy.jpg');">
+        
     </div>
 
-
-    <section>
+    <footer class="bg-gray-800 text-white p-8 text-3xl">
         <h1>Sobre la Empresa <strong>INSYHOGAR</strong></h1>
-
-        <p>Ubicada en el corazón de la ciudad, <strong>la Empresa INSYHOGAR</strong> trae para el mercado lo mejor en
-            instalaciones y remodelaciones para dar vida a los sueños de los clientes. Fundada en 2013, la empresa
-            INSYHOGAR ya se destaca en la ciudad y conquista nuevos clientes diariamente.</p>
-
-        <p id="mision"><em>Nuestra misión es: <strong>"Soñar, construir, vivir".</strong></em></p>
-
-        <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el
-            mundo de la construccion y el mobiliario, para así ofrecer a nuestros clientes las últimas tendencias. El
-            buen servicio y calidad que nos llevan de a la excelencia y agilidad, garantizando la satisfacción de
-            nuestros clientes.</p>
-    </section>
-
-
+        <p>Ubicada en el corazón de la ciudad, <strong>la Empresa INSYHOGAR</strong> trae para el mercado lo mejor en instalaciones y remodelaciones para dar vida a los sueños de los clientes. Fundada en 2013, la empresa INSYHOGAR ya se destaca en la ciudad y conquista nuevos clientes diariamente.</p>
+        <p id="mision text-lg"><em>Nuestra misión es: <strong>"Soñar, construir, vivir".</strong></em></p>
+        <p>Ofrecemos profesionales experimentados que están constantemente observando los cambios y movimiento en el mundo de la construcción y el mobiliario, para así ofrecer a nuestros clientes las últimas tendencias. El buen servicio y calidad que nos llevan a la excelencia y agilidad, garantizando la satisfacción de nuestros clientes.</p>
+    </footer>
 </body>
 
 </html>
