@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta chartset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSYHOGAR</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/js/kitwind.config.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .whatsapp-button i {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <div class="relative">
+            <label for="Search" class="sr-only">Buscar</label>
+
+            <input type="text" id="Search" placeholder="Search for..."
+                class="w-full rounded-md border-gray-200 py-2.5 pe-10 shadow-sm sm:text-sm" />
+
+            <span class="absolute inset-y-0 end-0 flex items-center pr-3">
+                <button type="button" class="text-gray-600 hover:text-gray-700">
+                    <span class="sr-only">Buscar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="h-4 w-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                </button>
+            </span>
+        </div>
+
+        <a href="https://wa.me/573208443691" target="_blank" class="whatsapp-button">
+            <i class="bi bi-whatsapp"></i>
+        </a>       
+        <div>
+            <img src="/src/IMG/logo-insy.jpg" class="absolute inset-0 object-cover w-full h-full" alt="" />
+            <div class="relative bg-gray-900 bg-opacity-75">
+                <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                    <div class="flex flex-col items-center justify-between xl:flex-row">
+                        <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+                            <h2
+                                class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-blue-700  sm:text-4xl sm:leading-none">
+                                INSYHOGAR<br class="hidden md:block" />
+                                SOBRE LA EMPRESA: <span class="text-teal-accent-400"></span>
+                            </h2>
+                            <p class="max-w-xl mb-4 text-base text-white md:text-lg">
+                                Ofrecemos servicios profesionales que están orientados a bservar los cambios y
+                                movimientos en el
+                                mundo de la construccion y el mobiliario, para así ofrecer a nuestros clientes las
+                                últimas tendencias.
+                            </p>
+                        </div>
+                        <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
+                            <div class="bg-white rounded shadow-2xl p-7 sm:p-10">
+                                <h3 class="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
+                                    SUBSCRIBETE
+                                </h3>
+                                <form>
+                                    <div class="mb-1 sm:mb-2">
+                                        <label for="firstName" class="inline-block mb-1 font-medium">NOMBRE</label>
+                                        <input placeholder="FERNANDO" required="" type="text"
+                                            class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                            id="firstName" name="firstName" />
+                                    </div>
+                                    <div class="mb-1 sm:mb-2">
+                                        <label for="lastName" class="inline-block mb-1 font-medium">APELLIDOS</label>
+                                        <input placeholder="ZAPATA" required="" type="text"
+                                            class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                            id="lastName" name="lastName" />
+                                    </div>
+                                    <div class="mb-1 sm:mb-2">
+                                        <label for="email" class="inline-block mb-1 font-medium">CORREO</label>
+                                        <input placeholder="fernando.doe@example.org" required="" type="text"
+                                            class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                                            id="email" name="email" />
+                                    </div>
+                                    <div class="mt-4 mb-2 sm:mb-4">
+                                        <button type="submit"
+                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-gray-700 transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                                            ENVIAR
+                                        </button>
+                                    </div>
+                                    <p class="text-xs text-gray-400 sm:text-sm">
+                                        Valoramos su privacidad y estamos comprometidos con la proteccion de sus datos
+                                        personales.
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </header>
+
+
+    <!--organizar el main que no se logra visualizar -->
+    <main>
+        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8">
+                <h2
+                    class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
+                    <span class="inline-block mb-1 sm:mb-4">
+                        INSYHOGAR<br class="hidden md:block" />
+
+                    </span>
+                    <div
+                        class="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100">
+                    </div>
+                </h2>
+                <p class="text- white: text-lg:max-w-md">
+                    ¿ cuantas veces ha tenido que arealizar algun tipo de trabajo en su hogar
+                    y no ha sabido a quien solicitarlo?
+                    aqui en InsyHogar podras encontrar todo tipo de trabajos especializados
+                </p>
+            </div>
+            <div class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
+                <a href="./Carpintria.html" aria-label="View Item">
+                    <div
+                        class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                        <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                            src="/src/IMG/640-professional-carpenter-man-working-with-woodwork-industry-tool-craftsman-person-workshop-with-timber-and-equipment-woodwork-construction.jpg"
+                            alt="CARPINTERIA" />
+                        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+                            <p class="text-sm font-medium tracking-wide text-white">
+                                CARPINTERIA
+                            </p>
+                            creación, reparación y diseño de estructuras y objetos de madera.
+                        </div>
+                    </div>
+                </a>
+                <a href="./Electricidad.html" aria-label="View Item">
+                    <div
+                        class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                        <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                            src="/src/IMG/vecteezy_ai-generated-electrician-in-helmet-and-uniform-working-with_36195852.jpg"
+                            alt="ELECTRICIDAD" />
+                        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+                            <p class="text-sm font-medium tracking-wide text-white">
+                                ELECTRICIDAD
+                            </p>
+                            sistemas de iluminación,Cableado estructural,Reparaciones
+                        </div>
+                    </div>
+                </a>
+                <a href="./Plomeria.html" aria-label="View Item">
+                    <div
+                        class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="/src/IMG/plomeros.jpg"
+                            alt="PLOMERIA" />
+                        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+                            <p class="text-sm font-medium tracking-wide text-white">
+                                PLOMERIA
+                            </p>
+                            instalación, reparación de sistemas de tuberías, grifos, desagües, calentadores de agua
+                        </div>
+                    </div>
+                </a>
+                <a href="./PequeñasInsata.html" aria-label="View Item">
+                    <div
+                        class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                        <img class="object-cover w-full h-56 md:h-64 xl:h-80"
+                            src="/src/IMG/vecteezy_modern-domestic-kitchen-with-clean-stainless-steel-equipment_32943434.jpg"
+                            alt="PEQUEÑAS INSTALACIONES" />
+                        <div class="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+                            <p class="text-sm font-medium tracking-wide text-white">
+                                PEQUEÑAS INSTALACIONES
+                            </p>
+                            Creacion de Proyectos en Madera y Acero, Instalaciones y Reparaciones
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="/" aria-label=""
+                    class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+                    See more
+                    <svg class="inline-block w-3 ml-2" fill="currentColor" viewBox="0 0 12 12">
+                        <path
+                            d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="footer p-10 bg-base-300 text-base-content">
+        <font></font>
+        <nav>
+            <font></font>
+            <h6 class="footer-title">Services</h6>
+            <font></font>
+            <a class="link link-hover">Branding</a>
+            <font></font>
+            <a class="link link-hover">Design</a>
+            <font></font>
+            <a class="link link-hover">Marketing</a>
+            <font></font>
+            <a class="link link-hover">Advertisement</a>
+            <font></font>
+        </nav>
+        <font></font>
+        <nav>
+            <font></font>
+            <h6 class="footer-title">Company</h6>
+            <font></font>
+            <a class="link link-hover">About us</a>
+            <font></font>
+            <a class="link link-hover">Contact</a>
+            <font></font>
+            <a class="link link-hover">Jobs</a>
+            <font></font>
+            <a class="link link-hover">Press kit</a>
+            <font></font>
+        </nav>
+        <font></font>
+        <nav>
+            <font></font>
+            <h6 class="footer-title">Social</h6>
+            <font></font>
+            <div class="grid grid-flow-col gap-4">
+                <font></font>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg></a>
+                <font></font>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                        </path>
+                    </svg></a>
+                <font></font>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg></a>
+                <font></font>
+            </div>
+            <font></font>
+        </nav>
+        <font></font>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
