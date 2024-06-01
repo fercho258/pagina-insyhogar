@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .whatsapp-button i {
+            font-size: 30px;
+        }
+    </style>
+
+    <meta chartset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACERCA DE</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/js/kitwind.config.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+
+    <header>
+        <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
+            <div class="container px-6 py-3 mx-auto md:flex">
+                <div class="flex items-center justify-between">
+                    <a href="#">
+                        <img class="w-auto h-20 " src="/pagina-insyhogar/src/IMG/logoINSYpeque.jpg" alt=""
+                            style="z-index: 1000;">
+                    </a>
+
+                    <!-- Mobile menu button -->
+                    <div class="flex lg:hidden">
+                        <button x-cloak @click="isOpen = !isOpen" type="button"
+                            class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                            aria-label="toggle menu">
+                            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                            </svg>
+
+                            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+                <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
+                    class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-between">
+                    <div class="flex flex-col px-2 -mx-4 md:flex-row md:mx-10 md:py-0">
+                        <a href="/pagina-insyhogar/src/content/index.html"
+                            class="px-2.5 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2">Inicio</a>
+
+                        <a href="/pagina-insyhogar/src/content/contact.html"
+                            class="px-2.5 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2">Contacto</a>
+                    </div>
+
+                    <div class="relative mt-4 md:mt-0">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                            <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+
+                        <input type="text"
+                            class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+                            placeholder="Search">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <a href="https://wa.me/573208443691" target="_blank" class="whatsapp-button">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+
+
+    </header>
+
+
+    <main>
+        <div class="relative">
+            <img src="/pagina-insyhogar/src/IMG/logo-insy.jpg" class="absolute inset-0 object-cover w-full h-full m-0"
+                alt="" />
+            <div class="relative bg-opacity-60 bg-deep-purple-accent-700">
+                <svg class="absolute inset-x-0 bottom-0 text-white" viewBox="0 0 1160 163">
+                    <path fill="currentColor"
+                        d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z">
+                    </path>
+                </svg>
+                <div
+                    class="relative  py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-40">
+                    <div class="flex flex-col items-center justify-end xl:flex-row">
+                        <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+                            <h2
+                                class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-blue-900 sm:text-4xl sm:leading-none items-center ">
+                                INSYHOGAR <br class="hidden md:block" />
+                                SOBRE LA EMPRESA:
+                            </h2>
+                            <p class="max-w-xl mb-4 text-base text-blue-600 md:text-lg font-bold">
+                                Ofrecemos servicios profesionales que están orientados a bservar los cambios y
+                                movimientos en el
+                                mundo de la construccion y el mobiliario, para así ofrecer a nuestros clientes las
+                                últimas tendencias.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div
+                    class="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
+                    <div class="relative lg:w-1/2">
+                        <img src="/pagina-insyhogar/src/IMG/vecteezy_cafe.jpg"
+                            alt="" class="object-cover w-full lg:absolute h-80 lg:h-full" />
+                        <svg class="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
+                            viewBox="0 0 20 104" fill="currentColor">
+                            <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104">
+                            </polygon>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
+
+                        <h5 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl">
+                            Bienvenido a INSYHOGAR
+                        </h5>
+                        <p class="mb-5 text-gray-800">
+                            En<span class="font-bold text-blue-500"> INSYHOGAR </span>  nos especializamos en ofrecer
+                            soluciones de reparación simples para el hogar. Desde pequeñas reparaciones hasta
+                            mantenimiento preventivo, nuestro equipo está aquí para brindarte un servicio confiable y de
+                            alta calidad. Fundada con el objetivo de simplificar la vida de nuestros clientes, nos
+                            enorgullecemos de ser tu socio confiable para todas tus necesidades de reparación en el
+                            hogar.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div
+                    class="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
+                   
+                    <div class="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
+
+                        <h5 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl">
+                            Nuestro Compromiso
+                        </h5>
+                        <p class="mb-5 text-gray-800">
+                            En <span class="text-blue-500 font-bold">INSYHOGAR,</span>nuestra principal prioridad es la satisfacción del cliente. Nos esforzamos por construir relaciones sólidas con cada uno de nuestros clientes, basadas en la confianza, la transparencia y la calidad del servicio. Creemos en la importancia de la fidelización de clientes y trabajamos incansablemente para superar las expectativas en cada interacción. Desde el primer contacto hasta la finalización del trabajo, puedes confiar en INSYHOGAR para ofrecerte un servicio excepcional en cada paso del camino.
+                        </p>
+
+                    </div>
+                    <div class="relative lg:w-1/2">
+                        <img src="/pagina-insyhogar/src/IMG/acerca-de-imagen.jpg"
+                            alt="" class="object-cover w-full lg:absolute h-80 lg:h-full" />
+                        <svg class="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
+                            viewBox="0 0 20 104" fill="currentColor">
+                            <polygon points="17.3036738 5.68434189e-14 20 5.68434189e-14 20 104 0.824555778 104">
+                            </polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>

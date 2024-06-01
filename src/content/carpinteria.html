@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta chartset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARPINTERIA</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="src/js/kitwind.config.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .whatsapp-button i {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
+        <div class="container px-6 py-3 mx-auto md:flex">
+            <div class="flex items-center justify-between">
+                <a href="#">
+                    <img class="w-auto h-20 " src="/pagina-insyhogar/src/IMG/logoINSYpeque.jpg" alt="" style="z-index: 1000;">
+                </a>
+
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden">
+                    <button x-cloak @click="isOpen = !isOpen" type="button"
+                        class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+                        aria-label="toggle menu">
+                        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                        </svg>
+
+                        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+            <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
+                class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:opacity-100 md:translate-x-0 md:flex md:items-center md:justify-between">
+                <div class="flex flex-col px-2 -mx-4 md:flex-row md:mx-10 md:py-0">
+                    <a href="/pagina-insyhogar/src/content/index.html"
+                        class="px-2.5 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2">Inicio</a>
+                    <a href="/pagina-insyhogar/src/content/acercade.html"
+                        class="px-2.5 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2">Acerca
+                        De</a>
+                    <a href="/pagina-insyhogar/src/content/contact.html"
+                        class="px-2.5 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 md:mx-2">Contacto</a>
+                </div>
+
+                <div class="relative mt-4 md:mt-0">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                        <svg class="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+
+                        </svg>
+                    </span>
+
+                    <input type="text"
+                        class="w-full py-2 pl-10 pr-4 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
+                        placeholder="Search">
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+
+
+        <a href="https://wa.me/573208443691" target="_blank" class="whatsapp-button">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+
+        <div>
+            <img src="/pagina-insyhogar/src/IMG/logo-insy.jpg"
+                class="absolute inset-0 object-cover w-full h-full  -z-40" alt="" />
+            <div class="relative bg-gray-900 bg-opacity-75">
+                <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                    <div class="flex flex-col items-center justify-between xl:flex-row">
+                        <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+                            <h2
+                                class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-blue-700  sm:text-4xl sm:leading-none">
+                                INSYHOGAR<br class="hidden md:block" />
+                                SOBRE LA EMPRESA: <span class="text-teal-accent-400"></span>
+                            </h2>
+                            <p class="max-w-xl mb-4 text-base text-white md:text-lg">
+                                Ofrecemos servicios profesionales que están orientados a observar los cambios y
+                                movimientos en el
+                                mundo de la construccion y el mobiliario, para así ofrecer a nuestros clientes las
+                                últimas tendencias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="backdrop-grayscale-0">
+            <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+                    <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+                        <img alt="" src="/pagina-insyhogar/src/IMG/carpinteria-imagen.jpg"
+                            class="absolute inset-0 h-full w-full object-cover" />
+                    </div>
+
+                    <div class="lg:py-24">
+                        <p class="mt-16"></p>
+                        <h2 class="text-3xl font-bold sm:text-4xl"> Servicio de Reparación de piezas y objetos. </h2>
+
+                        <p class="mt-4 text-gray-600">
+
+                        <ul>Nuestros Servicios Incluyen:</ul>
+                        <p class="mt-4"></p>
+                        <li>Reparación de sillas, mesas, escritorios y otros muebles de madera</li>
+                        <li>Restauración de muebles antiguos y vintage</li>
+                        <li>Ajustes y refuerzos estructurales</li>
+                        <li> Reemplazo de piezas dañadas o faltantes</li>
+                        <li>Reparación de armarios, puertas y ventanas de madera</li>
+                        <li>Soluciones a medida para cualquier tipo de proyecto de carpintería</li>
+
+                        </p>
+
+                        <a href="#"
+                            class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400">
+                            Cotiza ahora!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+                    <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+                        <img alt="" src="/pagina-insyhogar/src/IMG/estructuras-imagen.jpg"
+                            class="absolute inset-0 h-full w-full object-cover" />
+                    </div>
+
+                    <div class="lg:py-24">
+                        <h2 class="text-3xl font-bold sm:text-4xl">Servicios de Diseño de Estructuras.</h2>
+
+                        <p class="mt-4 text-gray-600">
+                        <ul>Nuestros Servicios Incluyen:</ul>
+                        <p class="mt-4"></p>
+                        <li>Diseño de Estructuras de Madera: Desde pérgolas y terrazas hasta escaleras y muebles a
+                            medida, nuestros diseños están pensados para realzar cualquier espacio.</li>
+                        <li>Consultoría y Asesoramiento: Trabajamos estrechamente con nuestros clientes para entender
+                            sus necesidades y proporcionar soluciones innovadoras y prácticas.</li>
+                        <li>Planos Detallados: Proveemos planos técnicos detallados que aseguran una construcción
+                            precisa y eficiente.
+                        </li>
+                        <li>Selección de Materiales: Ofrecemos orientación en la selección de los mejores materiales
+                            para cada proyecto, asegurando la combinación perfecta de estética y resistencia.</li>
+                        <li>Visualización 3D: Utilizamos tecnologías avanzadas para crear modelos en 3D que permiten a
+                            nuestros clientes visualizar el resultado final antes de comenzar la construcción.</li>
+
+
+
+
+                        </p>
+
+                        <a href="#"
+                            class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400">
+                            Cotiza ahora!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+                <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+                    <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
+                        <img alt="" src="/pagina-insyhogar/src/IMG/carpinteria-imagen.jpg"
+                            class="absolute inset-0 h-full w-full object-cover" />
+                    </div>
+
+                    <div class="lg:py-24">
+                        <h2 class="text-3xl font-bold sm:text-4xl"> Servicios Profesionales de Carpintería. </h2>
+
+                        <p class="mt-4 text-gray-600">
+
+                        <ul>Nuestros servicios incluyen:</ul>
+                        <p class="mt-4"></p>
+                        <li>Muebles Personalizados: Desde mesas y sillas hasta estanterías y armarios, diseñamos y
+                            fabricamos muebles que se adaptan perfectamente a tu espacio y estilo.</li>
+                        <li>Proyectos de Interiorismo: Colaboramos contigo para crear ambientes acogedores y
+                            funcionales, aportando soluciones creativas y prácticas.</li>
+                        <li>Carpintería Residencial y Comercial: Ofrecemos servicios tanto para el hogar como para
+                            negocios, desde pequeños arreglos hasta grandes proyectos.</li>
+                        <li>Reparaciones y Restauraciones: Devolvemos la vida a tus muebles y estructuras de madera
+                            antiguas con nuestras técnicas de restauración expertas.</li>
+                        <li>Accesorios y Decoraciones: Diseñamos y fabricamos una variedad de objetos decorativos y
+                            funcionales, como marcos, estantes flotantes, y más.</li>
+
+
+
+
+
+                        </p>
+
+                        <a href="#"
+                            class="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400">
+                            Cotiza ahora!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <footer class="footer p-10 bg-base-300 ">
+        <div class="grid_3">
+            <section id="text-2" class="widget widget_text">
+                <div class="textwidget object-contain w-16 h-16"><img src="/pagina-insyhogar/src/IMG/logoINSYpeque.jpg"
+                        atl="Hogar Reparación" title="Hogar Reparación"></div>
+            </section>
+
+
+            <div class="grid_3">
+                <section id="text-5" class="widget widget_text">
+                    <h3 class="encabezadofooter font-bold">Servicios de Reparación</h3>
+                    <div class="textwidget">
+                        <address>
+                            <ul class="address">
+                                <li>Gestionamos todo el proceso de asistencia y reparación de su comunidad y hogar.
+                                </li>
+                                <li>Confíe en nosotros, tenemos vocación por hacerle la vida más fácil a nuestros
+                                    clientes.</li>
+                            </ul>
+                        </address>
+                    </div>
+                </section>
+            </div>
+            <div class="grid_3">
+                <section id="text-4" class="widget widget_text">
+                    <h3 class="encabezadofooter font-bold">CONTACTO</h3>
+                    <div class="textwidget">
+                        <address>
+                            <ul class="phone">
+                                <li>Teléfono: (+57) 300 280 5724</li>
+                                <li></li>
+                            </ul>
+                            <ul class="email">
+                                <li>reparaciones@InsyHogar.com</li>
+                            </ul>
+                        </address>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="grid_3">
+            <section id="text-3" class="widget widget_text">
+                <h3 class="encabezadofooter font-bold">Descarga nuestra app</h3>
+                <div class="textwidget">
+                    <p><a title="Descargar Hogar Reparación IOS"
+                            onclick="_gaq.push(['_trackEvent', 'Descargas', 'Descargaappstore', 'botonverdehome','1' ])"
+                            href="https://itunes.apple.com/es/app/hogar-reparacion/id625286808?mt=8" target="blank"><img
+                                alt=""
+                                src="http://www.hogarreparacion.com/wp-content/uploads/2013/08/hogar-reparacion-app-ios.png"
+                                width="154" height="56"></a><br> <a title="Descargar Hogar Reparación ANDROID"
+                            onclick="_gaq.push(['_trackEvent', 'Descargas', 'Descargaandroid', 'botonverdehome','1' ])"
+                            href="https://play.google.com/store/apps/details?id=de.Rocky.Android.Hogar"
+                            target="blank"><img alt=""
+                                src="http://www.hogarreparacion.com/wp-content/uploads/2013/08/hogar-reparacion-app-android.png"
+                                width="154" height="56"></a></p>
+                </div>
+            </section>
+        </div>
+
+        <nav>
+            <p class="mt-4 text-gray-600"></p>
+            <h6 class="footer-title font-bold">Social</h6>
+            <font></font>
+            <div class="grid grid-flow-col gap-4">
+                <font></font>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg></a>
+                <font></font>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                        </path>
+                    </svg></a>
+                <font></font>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg></a>
+                <font></font>
+            </div>
+            <font></font>
+        </nav>
+        <font></font>
+    </footer>
+</body>
